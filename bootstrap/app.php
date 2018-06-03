@@ -13,10 +13,10 @@ $container = $app->getContainer();
 $capsule = new Capsule;
 $capsule->addConnection([
     'driver'    => 'mysql',
-    'host'      => '127.0.0.1',
-    'database'  => 'cart',
-    'username'  => 'root',
-    'password'  => '',
+    'host'      => 'host',
+    'database'  => 'database',
+    'username'  => 'username',
+    'password'  => 'password',
     'charset'   => 'utf8',
     'collation' => 'utf8_unicode_ci',
     'prefix'    => ''
@@ -24,10 +24,11 @@ $capsule->addConnection([
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
 
-Braintree_Configuration::environment('sandbox');
-Braintree_Configuration::merchantId('mc9467bkcdxftz33');
-Braintree_Configuration::publicKey('btb8dvzc8twrhkjz');
-Braintree_Configuration::privateKey('e79aeadf00b3e8b84637edced9ba0dcc');
+/* Register to braintree */
+Braintree_Configuration::environment('');
+Braintree_Configuration::merchantId('');
+Braintree_Configuration::publicKey('');
+Braintree_Configuration::privateKey('');
 
 require __DIR__ . '/../app/routes.php';
 
