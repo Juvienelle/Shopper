@@ -16,8 +16,6 @@ use Cart\Validation\Contracts\ValidatorInterface;
 use Cart\Support\Storage\Contracts\StorageInterface;
 
 return [
-	// 'router' => get(Slim\Router::class),
-
     ValidatorInterface::class => function (ContainerInterface $c)
     {
         return new Validator;
